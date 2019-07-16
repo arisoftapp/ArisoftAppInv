@@ -54,6 +54,7 @@ public class LoginActivity extends AppCompatActivity{
     final User user_class = new User();
     Integer cont = 0;
     String mensaje;
+    //prueba
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
