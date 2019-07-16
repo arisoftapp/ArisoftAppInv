@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity{
     Integer cont = 0;
     String mensaje;
     //prueba
+    //x2
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
