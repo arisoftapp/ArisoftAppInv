@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/modal_inset">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/modal_title_background">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Opciones de detalles"
+            android:textColor="@color/White"
+            android:textSize="18dp"
+            app:fontFamily="@font/robotomedium"
+            app:textAllCaps="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <RadioGroup
+            android:id="@+id/opc_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rb_solo_cont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar sólo artículos del conteo"
+                android:checked="true"
+                android:fontFamily="@font/robotoblack"/>
+
+            <RadioGroup
+                android:id="@+id/conteo_opc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/cont_todo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar todo"
+                    android:checked="true"
+                    android:buttonTint="@color/grey"/>
+
+                <RadioButton
+                    android:id="@+id/cont_dif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar sólo diferencias"
+                    android:buttonTint="@color/grey"/>
+            </RadioGroup>
+
+            <RadioButton
+                android:id="@+id/rb_todos_alm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar todos los artículos con existencia en el almacén "
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/robotoblack"/>
+
+            <RadioGroup
+                android:id="@+id/alm_opc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/alm_todo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar todo"
+                    android:checked="true"
+                    android:buttonTint="@color/grey"/>
+
+                <RadioButton
+                    android:id="@+id/alm_dif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar sólo diferencias"
+                    android:buttonTint="@color/grey"/>
+            </RadioGroup>
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_aceptar"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aceptar"
+        android:layout_gravity="right"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

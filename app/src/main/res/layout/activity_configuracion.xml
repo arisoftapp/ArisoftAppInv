@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".configuracion">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Switch
+            android:id="@+id/sw_busalm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activar Busqueda de Almacenes"
+            android:gravity="left"
+            android:textSize="20dp"
+            android:paddingLeft="50dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gris">
+
+        </View>
+        <Switch
+            android:id="@+id/sw_tipoalm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desactivar Pantalla Tipo Inventario"
+            android:gravity="left"
+            android:textSize="20dp"
+            android:paddingLeft="50dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gris">
+
+        </View>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

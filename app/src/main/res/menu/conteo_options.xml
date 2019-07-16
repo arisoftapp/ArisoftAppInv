@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/done"
+        android:icon="@drawable/ic_done"
+        android:title="Finalizar conteo"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/edit"
+        android:icon="@drawable/ic_edit"
+        android:title="Editar conteo"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/drop"
+        android:icon="@drawable/ic_drop"
+        android:title="Eliminar del conteo"
+        app:showAsAction="always" />
+
+
+    <item android:id="@+id/cancel"
+        android:title="Descartar conteo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/reset"
+        android:title="Reiniciar conteo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menucod1"
+        android:checkable="true"
+        android:title="Codigo 1" />
+    <item
+        android:id="@+id/menucod2"
+        android:checkable="true"
+        android:title="Codigo 2" />
+
+</menu>

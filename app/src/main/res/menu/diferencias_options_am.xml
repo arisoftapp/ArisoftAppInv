@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/save"
+        android:icon="@drawable/ic_save"
+        android:title="Guardar conteo"
+        app:showAsAction="always" />
+
+
+    <item android:id="@+id/drop"
+        android:icon="@drawable/ic_drop"
+        android:title="Eliminar del conteo"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/edit_cont"
+        android:title="Comentarios"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/opciones"
+        android:title="Opciones"
+        app:showAsAction="never" />
+</menu>

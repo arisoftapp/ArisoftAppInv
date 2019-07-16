@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"></group>
+
+    <item android:title="Artículos">
+        <menu>
+            <!--<group android:checkableBehavior="single"></group>-->
+            <item
+                android:id="@+id/nav_listaArt"
+                android:icon="@drawable/ic_lista"
+                android:title="Lista de artículos"
+                android:visible="false"
+                />
+            <item
+                android:id="@+id/nav_existencias"
+                android:icon="@drawable/ic_almacen"
+                android:title="Existencias" />
+            <item
+                android:id="@+id/nav_listaPrec"
+                android:icon="@drawable/ic_precio"
+                android:title="Lista con precios"
+                android:visible="false"/>
+        </menu>
+    </item>
+
+    <item android:title="Inventario">
+        <menu>
+            <item
+                android:id="@+id/nav_entrega"
+                android:icon="@drawable/ic_articulos"
+                android:title="Control de entrega"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/nav_salida"
+                android:icon="@drawable/ic_salida"
+                android:title="Salida"
+                android:visible="false"/>
+            <item
+                android:id="@+id/nav_entrada"
+                android:icon="@drawable/ic_entrada"
+                android:title="Entrada"
+                android:visible="false"/>
+            <item
+                android:id="@+id/nav_invFisico"
+                android:icon="@drawable/ic_warehouse"
+                android:title="Inventario Físico" />
+            <item
+                android:id="@+id/nav_recibido"
+                android:icon="@drawable/ic_storage"
+                android:title="Control de Surtido" />
+        </menu>
+    </item>
+    <item android:title="Configuracion">
+        <menu>
+            <item
+                android:id="@+id/config"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Configuracion" />
+        </menu>
+    </item>
+
+    <item android:title="Usuario">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Cerrar Sesión" />
+        </menu>
+    </item>
+
+</menu>

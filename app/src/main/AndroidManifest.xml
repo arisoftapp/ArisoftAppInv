@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.arisoft_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticulosListaActivity"
+            android:label="Lista de Artículos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticuloListaDetallesActivity"
+            android:label="Detalle de Artículo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticulosExistenciaAlmacenActivity"
+            android:label="Existencia por almacen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticulosExistenciaGeneralActivity"
+            android:label="Existencia General de Artículos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticuloExistenciaAlmDetallesActivity"
+            android:label="Detalle de Existencia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticuloExistenciaGnrlDetallesActivity"
+            android:label="Detalle de Existencia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InventarioActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Conteo Físico" />
+        <activity
+            android:name=".SelectExistenciaActivity"
+            android:label="Existencia de Artículos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ArticulosListaPreciosActivity" />
+        <activity android:name=".ArticuloPrecioDetallesActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".DiferenciasActivity"
+            android:label="Diferencias del conteo" />
+        <activity android:name=".entradas" />
+        <activity
+            android:name=".controlRecibido"
+            android:configChanges="orientation|screenSize"
+            android:label="Control de Surtido" />
+        <activity
+            android:name=".controlRecibidoMulti"
+            android:configChanges="orientation|screenSize"
+            android:label="Control de Surtido Multiple" />
+        <activity android:name=".configuracion"
+            android:label="Configuracion"
+            >
+
+        </activity>
+    </application>
+
+</manifest>

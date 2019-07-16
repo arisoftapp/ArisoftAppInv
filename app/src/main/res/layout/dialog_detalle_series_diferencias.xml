@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/modal_inset">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/modal_title_background">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Detalle de conteo de series"
+            android:textColor="@color/White"
+            android:textSize="18dp"
+            app:fontFamily="@font/robotomedium"
+            app:textAllCaps="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/grey"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_codigoArt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoblack"
+                android:text="Código"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/tv_nombreArt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HOLA"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:ellipsize="end"
+                android:textColor="@android:color/background_light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoblack"
+                android:text="Existencia"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@android:color/background_light"/>
+
+            <TextView
+                android:id="@+id/tv_exist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="Existencia"
+                android:maxLines="1"
+                android:textColor="@android:color/background_light"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoblack"
+                android:text="Conteo"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@android:color/background_light"/>
+
+            <TextView
+                android:id="@+id/tv_cont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="conteo"
+                android:maxLines="1"
+                android:textColor="@android:color/background_light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoblack"
+                android:text="Diferencia"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@android:color/background_light"/>
+
+            <TextView
+                android:id="@+id/tv_dife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoblack"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="diferencia"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Series en conteo"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/robotoblack"
+                android:paddingStart="8dp"
+                android:background="@drawable/border_top_n_bottom"/>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/border_top_n_bottom"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="Serie" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotomedium"
+                    android:gravity="center"
+                    android:text="Estado" />
+
+            </LinearLayout>-->
+
+            <ListView android:id="@+id/lv_series_enconteo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                />
+            <TextView
+                android:id="@+id/tv_nocontadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No hay series en el conteo"
+                android:gravity="center_vertical|center_horizontal"
+                android:fontFamily="@font/robotoregular"
+                android:paddingStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Series no contadas"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/robotoblack"
+                android:paddingStart="8dp"
+                android:background="@drawable/border_top_n_bottom"/>
+
+            <ListView
+                android:id="@+id/lv_series_noconteo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/tv_nodescartadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No hay series descartadas"
+                android:gravity="center_vertical|center_horizontal"
+                android:fontFamily="@font/robotoregular"
+                android:paddingStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_aceptar"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aceptar"
+        android:layout_gravity="right"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

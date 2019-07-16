@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_conteo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_editor_absoluteX="0dp"
+    app:layout_editor_absoluteY="0dp"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/robotomedium"
+        android:text="Seleccione Almacen:"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:buttonTint="@color/colorPrimary"
+            android:visibility="gone"
+
+            />
+
+        <EditText
+            android:id="@+id/et_alm"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Id Almacen"
+            android:imeOptions="actionDone"
+            android:inputType="textCapCharacters"
+            android:singleLine="true"
+            android:visibility="gone"
+            />
+        <AutoCompleteTextView
+            android:id="@+id/actv_alm"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:hint="Selecciona un Almacen"
+            android:completionThreshold="1"
+            android:visibility="gone"
+            />
+
+
+
+        <Spinner
+            android:id="@+id/spinner_alm2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_consultar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_corner_button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:onClick="consultar"
+        android:text="INICIAR CONTEO"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
