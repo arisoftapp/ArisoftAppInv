@@ -50,8 +50,8 @@ public class FragmentAlmacenConteoModal extends BottomSheetDialogFragment {
         spinner.requestFocus();
         cb_text=v.findViewById(R.id.cb_text);
         et_alm=v.findViewById(R.id.et_alm);
-        actv_alm=v.findViewById(R.id.actv_alm);
-        actv_alm.setAdapter(getAlmacenes(true));
+        //actv_alm=v.findViewById(R.id.actv_alm);
+        //actv_alm.setAdapter(getAlmacenes(true));
         Button btn_consultar = v.findViewById(R.id.btn_consultar);
         if(revisarConfig()==true)
         {
