@@ -353,6 +353,11 @@ public class MainActivity extends AppCompatActivity
             startActivity(config);
             //Toast.makeText(this,"configuracion",Toast.LENGTH_SHORT).show();
         }
+        else if(id==R.id.nav_movimientos)
+        {
+            Intent mov = new Intent(getApplicationContext(),movimientosInventario.class);
+            startActivity(mov);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

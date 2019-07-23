@@ -52,6 +52,10 @@
                 android:id="@+id/nav_recibido"
                 android:icon="@drawable/ic_storage"
                 android:title="Control de Surtido" />
+            <item
+                android:id="@+id/nav_movimientos"
+                android:icon="@drawable/ic_movimientos_inv"
+                android:title="Movimientos" />
         </menu>
     </item>
     <item android:title="Configuracion">
