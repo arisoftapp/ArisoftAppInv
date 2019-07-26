@@ -19,6 +19,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,11 +52,15 @@ public class MainActivity extends AppCompatActivity
     private String client_URL;
     private ProgressDialog progreso;
     Context contexto=this;
+    LinearLayout ll_actalm,ll_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ll_actalm=(LinearLayout)findViewById(R.id.ll_actalm);
+        ll_btn=(LinearLayout)findViewById(R.id.ll_btn);
+
 
         getDomain();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -103,6 +108,10 @@ public class MainActivity extends AppCompatActivity
 
         db.close();
         return user;
+    }
+    public void cargaAlmacenes(View view)
+    {
+        new ConsultaAlmacen().execute("almacenes");
     }
     public void inventarioFisico(View view)
     {
@@ -176,9 +185,9 @@ public class MainActivity extends AppCompatActivity
                 HttpClient cliente = new DefaultHttpClient();
                 /* Definimos la ruta al servidor. */
                 String value="Fallo";
-                HttpParams httpParameters = new BasicHttpParams();
-                HttpConnectionParams.setConnectionTimeout(httpParameters, 900000);
-                HttpConnectionParams.setSoTimeout(httpParameters, 900000);
+                //HttpParams httpParameters = new BasicHttpParams();
+                //HttpConnectionParams.setConnectionTimeout(httpParameters, 900000);
+                //HttpConnectionParams.setSoTimeout(httpParameters, 900000);
                 HttpGet htpoget = new HttpGet(URL+params[0]);
                 org.apache.http.HttpResponse resx = cliente.execute(htpoget);
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(resx.getEntity().getContent()));
@@ -239,11 +248,15 @@ public class MainActivity extends AppCompatActivity
             {
                 Toast.makeText(getApplicationContext(), "Almacenes agregados con éxito",
                         Toast.LENGTH_LONG).show();
+                ll_btn.setVisibility(View.VISIBLE);
+                ll_actalm.setVisibility(View.GONE);
             }
             else
             {
                 Toast.makeText(getApplicationContext(), "Error al cargar almacenes:"+s,
                         Toast.LENGTH_LONG).show();
+                ll_btn.setVisibility(View.GONE);
+                ll_actalm.setVisibility(View.VISIBLE);
             }
             progreso.dismiss();
             super.onPostExecute(s);
