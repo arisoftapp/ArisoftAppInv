@@ -45,11 +45,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
                     android:text="Referencia:"
                     android:textAlignment="center"
                     android:gravity="center"/>
@@ -63,18 +64,33 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
                 android:layout_weight="1">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Fecha:"
-                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="01/01/2019"
+                    android:layout_weight="1"
                     android:textAlignment="center"
                     android:gravity="center"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="fecha"
+                    android:layout_weight="1"
+                    android:text="fecha"/>
+
 
             </LinearLayout>
             <LinearLayout
@@ -82,54 +98,104 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:weightSum="4">
-                <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="2">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Almacen:"
+                        android:textAlignment="center"
+                        android:gravity="center"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+
                     android:layout_weight="1"
-                    android:text="ALM:"
-                    android:textAlignment="center"
-                    android:gravity="center"/>
-                <EditText
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="REC:"
-                    android:textAlignment="center"
-                    android:gravity="center"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:text="Recibe:"
+                        android:textAlignment="center"
+                        android:gravity="center"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:weightSum="3">
+                android:weightSum="5"
+                android:layout_marginBottom="10dp">
                 <EditText
                     android:hint="cantidad"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-                <EditText
-                    android:hint="codigo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
                     android:layout_weight="1"
-                    android:text="Agregar"/>
+                    />
+                <EditText
+                    android:id="@+id/et_codigo"
+                    android:hint="codigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    />
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+
+                    <ImageButton
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/botonredondo"
+                        android:id="@+id/btn_buscarcod"
+                        android:src="@drawable/busqueda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+
+                        android:layout_weight="1"/>
+                    <ImageButton
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/botonredondo"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="agregar"
+                        android:src="@drawable/agregaradd"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:text="Agregar" />
+                </LinearLayout>
+
 
             </LinearLayout>
+
+
 
 
         </LinearLayout>
@@ -199,11 +265,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Comentario"
+                    android:onClick="comentario"
                     android:layout_weight="1"/>
                 <Button
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:onClick="guardar"
                     android:text="Guardar"/>
             </LinearLayout>
 
