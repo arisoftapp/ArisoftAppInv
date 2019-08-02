@@ -25,19 +25,12 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.Locale;
 
 import android.app.*;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,7 +39,7 @@ import app.arisoft_app.Tools.AuthResponse;
 import app.arisoft_app.Tools.Database;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, FragmentAlmacenModal.BottomSheetListener {
+        implements NavigationView.OnNavigationItemSelectedListener, FragmentAlmacenModal.BottomSheetListener , FragmentAlmacenConteoModalCorreccion.BottomSheetListener {
     private String URL;
     private int almsize;
     private String client_URL;
@@ -115,7 +108,7 @@ public class MainActivity extends AppCompatActivity
     }
     public void inventarioFisico(View view)
     {
-        FragmentAlmacenConteoModal bottomSheet = new FragmentAlmacenConteoModal();
+        FragmentAlmacenConteoModalCorreccion bottomSheet = new FragmentAlmacenConteoModalCorreccion();
         bottomSheet.show(getSupportFragmentManager(), "AlmacenBottomSheet");
     }
     public void existencia(View view)

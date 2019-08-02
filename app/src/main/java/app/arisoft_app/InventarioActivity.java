@@ -144,6 +144,7 @@ public class InventarioActivity extends AppCompatActivity implements DialogInter
             idalmacen = bundle.getString("idalmacen");
             almacen = bundle.getString("almacen");
             String selectedAlm = idalmacen + " - " + almacen;
+            Log.i("idalmacen",idalmacen);
             if(bundle!=null){
                 tv_alm = page.findViewById(R.id.tv_alm);
                 tv_alm.setText(almacen);

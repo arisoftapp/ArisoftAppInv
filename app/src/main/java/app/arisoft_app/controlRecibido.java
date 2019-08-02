@@ -112,6 +112,7 @@ public class controlRecibido extends AppCompatActivity {
             idalmacen = bundle.getString("idalmacen");
             //Toast.makeText(this, "idalmacen:"+idalmacen, Toast.LENGTH_SHORT).show();
             almacen = bundle.getString("almacen");
+            Log.i("idalmacen",idalmacen);
             String selectedAlm = idalmacen + " - " + almacen;
             if(bundle!=null){
                 tv_alm = page.findViewById(R.id.tv_alm);
