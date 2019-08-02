@@ -106,7 +106,6 @@ public class movimientosInventario extends AppCompatActivity implements DialogIn
                 {
                     fecha=""+dayOfMonth+"-"+month+"-"+year;
                 }
-
                 tv_fecha.setText(fecha);
 
             }
