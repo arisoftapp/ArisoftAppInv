@@ -13,7 +13,7 @@ import app.arisoft_app.Tools.AuthResponse;
 public class Database extends SQLiteOpenHelper {
 
     public Database(Context context, CursorFactory factory,int version) {
-        super(context, DATABASE_NAME, factory, version);
+        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
 
     public static final int DATABASE_VERSION = 1;

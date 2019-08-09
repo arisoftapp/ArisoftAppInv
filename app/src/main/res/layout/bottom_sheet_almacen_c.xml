@@ -30,7 +30,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CONSULTAR"
+        android:text="INICIAR CONTEO"
         android:id="@+id/btn_consultar"
         android:onClick="consultar"
         android:backgroundTint="@color/colorPrimaryDark"

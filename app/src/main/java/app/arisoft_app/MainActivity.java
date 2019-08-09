@@ -342,7 +342,7 @@ public class MainActivity extends AppCompatActivity
             bottomSheet.show(getSupportFragmentManager(), "AlmacenBottomSheet");
 
         } else if (id == R.id.nav_invFisico) {
-            FragmentAlmacenConteoModal bottomSheet = new FragmentAlmacenConteoModal();
+            FragmentAlmacenConteoModalCorreccion bottomSheet = new FragmentAlmacenConteoModalCorreccion();
             bottomSheet.show(getSupportFragmentManager(), "AlmacenBottomSheet");
         } else if (id == R.id.nav_logout){
             new AlertDialog.Builder(this)
