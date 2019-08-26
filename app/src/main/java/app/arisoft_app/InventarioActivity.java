@@ -87,7 +87,7 @@ public class InventarioActivity extends AppCompatActivity implements DialogInter
     ArrayList<Inventario> Inventario;
     private InventarioListaConteoAdapter inv_adapter;
     private GridView gridView;
-    float conteobusqueda;
+    float conteobusqueda,conteoserie,conteoexistencia;
     int partidas=0;
     String idbusqueda;
     Boolean encontrarBusqueda;
@@ -1258,7 +1258,7 @@ public class InventarioActivity extends AppCompatActivity implements DialogInter
                         JSONObject objeto = jArray.getJSONObject(i); //Obtenemos cada uno de los objetos del array results
                         String alm=objeto.getString("almacen");
                         String serie=objeto.getString("serie");
-                        Log.i("cargarseries",""+codigo+" "+alm+" "+serie);
+                        Log.i("cargarseries",""+codigo+" "+alm+" "+serie+" "+objeto.length());
                         insertarSerie(serie,"N");
 
                     } catch (JSONException e) {

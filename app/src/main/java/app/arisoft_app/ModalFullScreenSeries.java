@@ -13,8 +13,10 @@ import android.database.sqlite.SQLiteException;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -69,7 +71,7 @@ public class ModalFullScreenSeries extends DialogFragment {
     ArrayList<Serie> Series;
     private InventarioListaSeriesAdapter seriesAdapter;
     String idalmacen;
-    String codigo, nombre;
+    String codigo, nombre,exiact;
     TextView codigoArt, nombreArt;
     EditText et_series;
     private String URL;
@@ -85,6 +87,7 @@ public class ModalFullScreenSeries extends DialogFragment {
         idalmacen = bundle.getString("idalmacen");
         codigo = bundle.getString("codigo");
         nombre = bundle.getString("desc");
+        exiact=bundle.getString("exi");
         //mensajes("idalmacen valor ",idalmacen);
         getDomain();
     }
@@ -236,8 +239,23 @@ public class ModalFullScreenSeries extends DialogFragment {
         db.close();
         return existeSerie;
     }
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void barra(String mensaje)
+    {
+
+        progreso = new ProgressDialog(getContext());
+        progreso.setMessage(mensaje);
+        progreso.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progreso.setIndeterminate(true);
+        //progreso.setProgress(0);
+        //progreso.setMax(100);
+        progreso.setCancelable(false);
+        progreso.show();
+
+    }
 
     public void compararSerie(final String serie,final Boolean ExisSerie) {
+        barra("Consultando Articulo ...");
         final String[] estatus = new String[1];
         ServiceExiActual service=retrofit().create(ServiceExiActual.class);
         Call<RespExiActual> call=service.compSerie(serie,codigo);
@@ -295,22 +313,26 @@ public class ModalFullScreenSeries extends DialogFragment {
                         //si no encuentra nada
                         //Log.i("serie:","no encontrada");
                         //insertarSerie(serie,"NE");
+                        progreso.dismiss();
                         estatus[0] ="NE";
                         //Toast.makeText(getApplicationContext(),"consulta vacia",Toast.LENGTH_SHORT).show();
                     }
                     if(ExisSerie==true)
                     {
+                        progreso.dismiss();
                         //modificar
                         modificarSerie(serie,estatus[0].toString());
 
                     }
                     else
                     {
+                        progreso.dismiss();
                         insertarSerie(serie,estatus[0].toString());
                     }
 
                 }
                 else {
+                    progreso.dismiss();
                     Toast.makeText(getActivity(),"no se encontro",Toast.LENGTH_SHORT).show();
                 }
             }

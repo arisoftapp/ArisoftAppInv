@@ -34,27 +34,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:background="@color/grey"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="8dp">
+                <LinearLayout
 
-                <TextView
-                    android:id="@+id/tv_codigoArt"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/robotoblack"
-                    android:text="Código"
-                    android:textColor="@android:color/background_light" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_codigoArt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotoblack"
+                        android:text="Código"
+                        android:textColor="@android:color/background_light" />
 
-                <TextView
-                    android:id="@+id/tv_nombreArt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HOLA"
-                    android:textColor="@android:color/background_light" />
+                    <TextView
+                        android:id="@+id/tv_nombreArt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HOLA"
+                        android:textColor="@android:color/background_light" />
+
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
             <LinearLayout
